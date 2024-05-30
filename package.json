@@ -39,5 +39,9 @@
     "vite-plugin-electron-renderer": "^0.14.5",
     "vue": "^3.4.21",
     "vue-tsc": "^2.0.6"
+  },
+  "dependencies": {
+    "canvaskit-wasm": "^0.39.1",
+    "newcar": "1.0.0-beta.7"
   }
 }
