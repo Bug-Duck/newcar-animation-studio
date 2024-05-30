@@ -1,49 +1,25 @@
 <script setup lang="ts">
-import HelloWorld from './components/HelloWorld.vue'
+import HorizontalSelector from './widgets/HorizontalSelector.vue'
+import Selector from './widgets/Selector.vue'
 </script>
 
 <template>
-  <div>
-    <a href="https://www.electronjs.org/" target="_blank">
-      <img src="./assets/electron.svg" class="logo electron" alt="Electron logo" />
-    </a>
-    <a href="https://vitejs.dev/" target="_blank">
-      <img src="./assets/vite.svg" class="logo" alt="Vite logo" />
-    </a>
-    <a href="https://vuejs.org/" target="_blank">
-      <img src="./assets/vue.svg" class="logo vue" alt="Vue logo" />
-    </a>
-  </div>
-  <HelloWorld msg="Electron + Vite + Vue" />
-  <div class="flex-center">
-    Place static files into the <code>/public</code> folder
-    <img style="width: 2.4em; margin-left: .4em;" src="/logo.svg" alt="Logo">
+  <div class="flex flex-grow flex-auto h-screen bg-gray-300">
+    <div class="flex flex-col w-screen">
+      <div class="w-full h-full bottom-6">
+        <div class="float-left w-[30%] h-full bg-[rgb(60,63,65)] border border-[rgb(75,75,75)]">
+          <Selector/>
+        </div>
+        <div class="float-left w-[70%] h-full bg-gray-400 border border-[rgb(75,75,75)] flex flex-col">
+          <div class="w-full h-[60%] bg-[rgb(43,43,43)] border border-[rgb(75,75,75)]"></div>
+          <div class="w-full h-[40%] bg-[rgb(43,43,43)] border border-[rgb(75,75,75)]">
+            <HorizontalSelector/>
+          </div>
+        </div>
+      </div>
+      <div class="w-full h-6 bottom-0">
+        <div class="h-6 bg-[rgb(60,63,65)] w-full">www</div>
+      </div>
+    </div>
   </div>
 </template>
-
-<style>
-.flex-center {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-
-.logo.electron:hover {
-  filter: drop-shadow(0 0 2em #9FEAF9);
-}
-
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-
-.logo.vue:hover {
-  filter: drop-shadow(0 0 2em #42b883aa);
-}
-</style>
